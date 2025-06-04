@@ -61,7 +61,7 @@ header {
 
 .header-row {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 16px;
     align-items: center; /* Alinha todos os itens ao centro verticalmente */
 }
@@ -234,7 +234,7 @@ footer .right {
     }
 
     header .header-row {
-        grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr !important;
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1.5fr !important;
     }
 
     header .header-section p,
@@ -310,7 +310,7 @@ footer .right {
     }
 
     .header-row {
-        grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr !important;
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1.5fr !important;
     }
 
     .header-section p,
@@ -383,7 +383,7 @@ footer .right {
     }
 
     .header-row {
-        grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr !important;
+        grid-template-columns: 2fr 1.5fr 1fr 1fr 1.5fr !important;
     }
 
     .header-section p,
@@ -453,7 +453,7 @@ footer .right {
     }
 
     .header-row {
-        grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr !important;
+        grid-template-columns: 2fr 1.5fr 1fr 1fr 1.5fr !important;
     }
 
     .header-section p,
