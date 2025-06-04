@@ -129,7 +129,7 @@ header {
   height: auto;
 }
 
-/* === Animação Reveal === */
+/* === AnimaÃ§Ã£o Reveal === */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -163,13 +163,13 @@ footer p {
 }
 
 footer .right {
-  margin-left: auto; /* Este "auto" empurra o conteúdo para a direita */
+  margin-left: auto; /* Este "auto" empurra o conteÃºdo para a direita */
 }
 
 
 /* === MEDIA QUERIES === */
 
-/* Até 600px (Mobile) */
+/* AtÃ© 600px (Mobile) */
 @media (max-width: 600px) {
   header .header-content p {
     font-size: 11px !important;
@@ -210,7 +210,7 @@ footer .right {
   }
 }
 
-/* Até 768px (Tablet Portrait) */
+/* AtÃ© 768px (Tablet Portrait) */
 @media (max-width: 768px) {
   header .header-content p {
     font-size: 15px;
@@ -250,7 +250,7 @@ footer .right {
   }
 }
 
-/* Até 1024px */
+/* AtÃ© 1024px */
 @media (max-width: 1024px) {
   header .header-content p {
     font-size: 16px;
@@ -289,4 +289,3 @@ footer .right {
     font-size: 10px;
   }
 }
-
