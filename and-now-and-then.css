@@ -91,7 +91,7 @@ header {
 
 /* IMAGEM FULL WIDTH */
 .image-full-width {
-    padding: 35px 5px 5px 5px !important; 
+    padding: 25px 5px 5px 5px !important; 
     box-sizing: border-box;
 }
 
@@ -248,7 +248,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 75px 5px 5px 5px !important;
+        padding: 50px 5px 5px 5px;
     }
 
     .image-full-sec {
@@ -326,7 +326,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 75px 5px 5px 5px;
+        padding: 50px 5px 5px 5px !important;
     }
 
     .image-full-sec {
