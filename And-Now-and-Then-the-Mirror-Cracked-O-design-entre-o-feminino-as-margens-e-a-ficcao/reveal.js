@@ -1,32 +1,33 @@
+// Aguarda o carregamento completo da página
 document.addEventListener("DOMContentLoaded", () => {
-  // Seu código para o overlay continua aqui (omitido para focar no vídeo)
+  const overlay = document.getElementById("imgOverlay");
+  const expandedImg = document.getElementById("expandedImg");
+  const closeBtn = document.querySelector(".close-btn");
 
-  const video = document.querySelector(".image-full-sec video");
-  if (video) {
-    // garante que está mudo e playsinline
-    video.muted = true;
-    video.playsInline = true;
-    video.setAttribute("muted", ""); 
-    video.setAttribute("playsinline", "");
+  // Seleciona todas as imagens clicáveis
+  const images = document.querySelectorAll(
+    ".image-full-width img, .image-full-sec img, .image-grid img"
+  );
 
-    // Tenta tocar o vídeo depois de 200ms
-    setTimeout(() => {
-      video.play().catch(() => {
-        console.log("Autoplay falhou, aguardando interação do usuário");
+  images.forEach((img) => {
+    img.style.cursor = "zoom-in"; // muda cursor para indicar clicável
+    img.addEventListener("click", () => {
+      expandedImg.src = img.src;
+      overlay.style.display = "flex";
+    });
+  });
 
-        // Se falhar, espera qualquer interação do usuário para tentar de novo
-        const tryPlayOnInteraction = () => {
-          video.play().catch(() => {
-            console.log("Tentativa após interação falhou.");
-          });
-          // Remove o event listener após tentar
-          window.removeEventListener("click", tryPlayOnInteraction);
-          window.removeEventListener("touchstart", tryPlayOnInteraction);
-        };
+  // Fecha o overlay quando clicas no botão fechar (a cruz)
+  closeBtn.addEventListener("click", () => {
+    overlay.style.display = "none";
+    expandedImg.src = "";
+  });
 
-        window.addEventListener("click", tryPlayOnInteraction);
-        window.addEventListener("touchstart", tryPlayOnInteraction);
-      });
-    }, 200);
-  }
+  // Opcional: fecha o overlay clicando fora da imagem ampliada
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.style.display = "none";
+      expandedImg.src = "";
+    }
+  });
 });
