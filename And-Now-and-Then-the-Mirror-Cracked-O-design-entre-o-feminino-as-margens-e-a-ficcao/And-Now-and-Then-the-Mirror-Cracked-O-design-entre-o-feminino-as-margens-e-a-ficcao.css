@@ -257,14 +257,14 @@ footer .right {
     align-items: center;
 
     /* Espaçamento lateral (podes ajustar o valor) */
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
     box-sizing: border-box; /* Garante que padding não aumenta o tamanho total */
 }
 
 #expandedImg {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100%;
+    max-height: 100%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s ease-in-out;
 }
