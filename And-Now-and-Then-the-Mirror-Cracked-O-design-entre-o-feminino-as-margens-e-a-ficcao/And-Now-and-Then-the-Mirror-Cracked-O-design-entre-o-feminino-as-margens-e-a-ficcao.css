@@ -123,20 +123,6 @@ header {
     padding: 0px 0px 5px 0px;
 }
 
-.video-block {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-  }
-  
-  .video-block video {
-    width: 100%;
-    max-width: 960px;
-    height: auto;
-    display: block;
-  }
-
 /* TEXTO */
 .text-block {
     padding: 0px 5px 5px 5px;
@@ -269,6 +255,11 @@ footer .right {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+
+    /* Espaçamento lateral (podes ajustar o valor) */
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box; /* Garante que padding não aumenta o tamanho total */
 }
 
 #expandedImg {
@@ -360,7 +351,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 90px 5px 5px 5px !important;
+        padding: 80px 5px 5px 5px !important;
     }
 
     .image-full-sec {
