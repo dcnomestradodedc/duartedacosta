@@ -202,6 +202,14 @@ a {
     align-items: flex-start;
 }
 
+.image-grid2 {
+    display: flex;
+    gap: 0px;
+    padding: 0 5px 5px 5px;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
 .grid-left,
 .grid-right {
     flex: 1;
@@ -245,16 +253,20 @@ footer .right {
     z-index: 9999;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+
+    /* Espaçamento lateral (podes ajustar o valor) */
+    padding: 5px !important;
+    box-sizing: border-box; /* Garante que padding não aumenta o tamanho total */
 }
 
 #expandedImg {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100%;
+    max-height: 100%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s ease-in-out;
 }
@@ -302,7 +314,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 30px 5px 5px 5px !important;
+        padding: 20px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -320,7 +332,6 @@ footer .right {
     body .text-block p {
         font-size: 11px !important;
         line-height: 1.15 !important;
-        word-spacing: -0.2px !important;
     }
 
     .p2 {
@@ -349,6 +360,31 @@ footer .right {
     .image-grid {
         gap: 5px !important;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -385,7 +421,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 70px 5px 5px 5px !important;
+        padding: 60px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -403,7 +439,6 @@ footer .right {
     .text-block p {
         font-size: 14px !important;
         line-height: 1.15 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -429,6 +464,31 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -465,7 +525,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 55px 5px 5px 5px !important;
+        padding: 45px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -483,7 +543,6 @@ footer .right {
     .text-block p {
         font-size: 14px !important;
         line-height: 1.15 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -509,6 +568,31 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -545,7 +629,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 55px 5px 5px 5px !important;
+        padding: 45px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -563,7 +647,6 @@ footer .right {
     .text-block p {
         font-size: 14.5px !important;
         line-height: 1.2 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -588,6 +671,31 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -624,7 +732,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 40px 5px 5px 5px !important;
+        padding: 30px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -642,7 +750,6 @@ footer .right {
     .text-block p {
         font-size: 14.5px !important;
         line-height: 1.2 !important;
-        word-spacing: -0.3px;
     }
 
     .destaques, .destaques2 {
@@ -667,6 +774,31 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -748,6 +880,31 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -825,6 +982,31 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -908,6 +1090,36 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .image-grid2 {
+        gap: 0px !important;
+        padding: 0 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -986,6 +1198,31 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
