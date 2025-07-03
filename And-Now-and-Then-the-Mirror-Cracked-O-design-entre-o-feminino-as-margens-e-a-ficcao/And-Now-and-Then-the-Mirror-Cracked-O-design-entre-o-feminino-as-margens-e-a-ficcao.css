@@ -201,10 +201,12 @@ a {
     align-items: flex-start;
 }
 
-.image-full-sec video {
-    width: 100%;
-    height: auto;
-    display: block;
+.image-grid2 {
+    display: flex;
+    gap: 0px;
+    padding: 0 5px 5px 5px;
+    box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .grid-left,
@@ -250,60 +252,20 @@ footer .right {
     z-index: 9999;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 
     /* Espaçamento lateral (podes ajustar o valor) */
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px;
     box-sizing: border-box; /* Garante que padding não aumenta o tamanho total */
 }
 
 #expandedImg {
     max-width: 100%;
     max-height: 100%;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    transition: transform 0.2s ease-in-out;
-}
-
-/* Botão fechar dentro do overlay */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 32px;
-    font-weight:lighter;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10000;
-    transition: color 0.3s ease;
-}
-
-.close-btn:hover {
-    color: #00FF00;
-}
-
-/* OVERLAY PARA EXPANDIR IMAGENS */
-.overlay {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-#expandedImg {
-    max-width: 90vw;
-    max-height: 90vh;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s ease-in-out;
 }
@@ -369,7 +331,6 @@ footer .right {
     body .text-block p {
         font-size: 11px !important;
         line-height: 1.15 !important;
-        word-spacing: -0.3px !important;
     }
 
     .p2 {
@@ -396,6 +357,27 @@ footer .right {
     .image-grid {
         gap: 5px !important;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -432,7 +414,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 130px 5px 5px 5px !important;
+        padding: 120px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -450,7 +432,6 @@ footer .right {
     .text-block p {
         font-size: 14px !important;
         line-height: 1.15 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -476,6 +457,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -512,7 +514,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 115px 5px 5px 5px !important;
+        padding: 105px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -530,7 +532,6 @@ footer .right {
     .text-block p {
         font-size: 14px !important;
         line-height: 1.15 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -556,6 +557,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -592,7 +614,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 125px 5px 5px 5px !important;
+        padding: 115px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -610,7 +632,6 @@ footer .right {
     .text-block p {
         font-size: 14.5px !important;
         line-height: 1.2 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -635,6 +656,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -671,7 +713,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 55px 5px 5px 5px !important;
+        padding: 45px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -689,7 +731,6 @@ footer .right {
     .text-block p {
         font-size: 14.5px !important;
         line-height: 1.2 !important;
-        word-spacing: -0.3px;
     }
 
     .destaques, .destaques2 {
@@ -714,6 +755,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -750,7 +812,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 60px 5px 5px 5px !important;
+        padding: 50px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -768,7 +830,6 @@ footer .right {
     .text-block p {
         font-size: 14.5 !important;
         line-height: 1.15 !important;
-        word-spacing: -0.3px !important;
     }
 
     .destaques, .destaques2 {
@@ -793,6 +854,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -829,7 +911,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 40px 5px 5px 5px !important;
+        padding: 30px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -847,7 +929,6 @@ footer .right {
     .text-block p {
         font-size: 15px !important;
         line-height: 1.2 !important;
-        word-spacing: -0.5px !important;
     }
     
     .destaques, .destaques2 {
@@ -872,6 +953,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -955,6 +1057,32 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .image-grid2 {
+        gap: 0px !important;
+        padding: 0 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -1033,6 +1161,27 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
