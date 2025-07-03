@@ -250,11 +250,15 @@ footer .right {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+
+    /* Espaçamento lateral (podes ajustar o valor) */
+    padding: 5px !important;
+    box-sizing: border-box; /* Garante que padding não aumenta o tamanho total */
 }
 
 #expandedImg {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100%;
+    max-height: 100%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s ease-in-out;
 }
@@ -349,6 +353,28 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -427,6 +453,28 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -509,6 +557,28 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -588,6 +658,28 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -665,6 +757,28 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -747,6 +861,28 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -824,6 +960,28 @@ footer .right {
     .image-grid {
         gap: 5px;
         padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -906,6 +1064,28 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+
     footer {
         padding: 0px 5px 5px 5px !important;
     }
@@ -986,6 +1166,28 @@ footer .right {
         padding: 0px 5px 5px 5px !important;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
+    }
+    
     footer {
         padding: 0px 5px 5px 5px !important;
     }
