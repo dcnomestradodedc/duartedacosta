@@ -83,7 +83,7 @@ body {
   word-spacing: -0.5px;
   text-align: left;
   -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.3px;
 }
 
 .desenvolvimento {
@@ -122,7 +122,7 @@ body {
   right: 0;
   text-decoration: underline;
   -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.3px;
 }
 
 /* Social links (coluna 3) */
@@ -138,7 +138,7 @@ body {
   display: inline-block;
   width: fit-content;
   -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.3px;
 }
 
 /* Colunas inferiores */
@@ -154,12 +154,11 @@ body {
 }
 
 .column h4 {
-  font-family: 'Abc Rounded Light', sans-serif;
-  font-size: 15px;
-  line-height: 1.2;
-  -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 0.05px;
-}
+    font-family: 'EB Garamond Medium', serif;
+    font-size: 18px;
+    line-height: 0.8;
+    -webkit-text-stroke-width: 0px;
+  }
 
 .ano {
   font-family: 'Abc Rounded Light', sans-serif;
@@ -176,7 +175,7 @@ body {
   line-height: 1.2;
   word-spacing: -0.5px;
   -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.3px;
 }
 
 a {
@@ -213,7 +212,7 @@ footer p {
   margin: 0;
   font-size: 12px;
   -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.3px;
 }
 
 footer .right {
@@ -222,11 +221,11 @@ footer .right {
 
 /* === MEDIA QUERIES === */
 
-/* MOBILE ADJUSTMENTS FOR IPHONE SE */
-@media screen and (max-width: 380px) {
+/* === iPhones pequenos — iPhone SE (~<= 380px) === */
+@media screen and (max-width: 375px) {
   body .intro-section {
-    grid-template-columns: 0.77fr 0fr 0.35fr !important;
-    gap: 10px !important;
+    grid-template-columns: 0.70fr 0.20fr 0.10fr !important;
+    gap: 30px !important;
     margin-bottom: 10px !important;
   }
 
@@ -240,7 +239,8 @@ footer .right {
     letter-spacing: -0.05px !important;
   }
 
-  body .destaques, .destaques2 {
+  body .destaques,
+  body .destaques2 {
     font-size: 12.5px !important;
     line-height: 0.8 !important;
     word-spacing: -0.5px !important;
@@ -253,9 +253,7 @@ footer .right {
   }
 
   body .image-box {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3.3/4 !important;
+    display: none !important;
   }
 
   body .columns {
@@ -266,9 +264,8 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 11px !important;
-    line-height: 1.15 !important;
-    margin-bottom: 5px !important;
+    font-size: 12.5px !important;
+    line-height: 0.8 !important;
     letter-spacing: -0.05px !important;
   }
 
@@ -296,11 +293,11 @@ footer .right {
   }
 }
 
-/* MOBILE ADJUSTMENTS FOR IPHONE 12 PRO */
-@media screen and (width: 390px) {
+/* === iPhones médios — iPhone 12 Pro === */
+@media screen and (min-width: 376px) and (max-width: 414px) {
   body .intro-section {
-    grid-template-columns: 0.77fr 0fr 0.45fr !important;
-    gap: 10px !important;
+    grid-template-columns: 0.77fr 0fr 0.20fr !important;
+    gap: 30px !important;
     margin-bottom: 10px !important;
   }
 
@@ -314,7 +311,8 @@ footer .right {
     letter-spacing: -0.05px !important;
   }
 
-  body .destaques, .destaques2 {
+  body .destaques,
+  body .destaques2 {
     font-size: 16px !important;
     word-spacing: -0.5px !important;
     letter-spacing: -0.2px !important;
@@ -326,9 +324,7 @@ footer .right {
   }
 
   body .image-box {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3.3/4 !important;
+    display: none !important;
   }
 
   body .columns {
@@ -339,11 +335,9 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 14px !important;
-    margin-bottom: 5px !important;
-    letter-spacing: -0.05px !important;
+    font-size: 16px !important;
   }
-
+  
   body .column p {
     font-size: 14px !important;
     letter-spacing: -0.05px !important;
@@ -367,11 +361,11 @@ footer .right {
   }
 }
 
-/* MOBILE ADJUSTMENTS FOR IPHONE XR */
-@media screen and (min-width: 400px) {
+  /* iPhones grandes — iPhone XR, 11, 14 Plus (~414px) */
+  @media screen and (min-width: 415px) and (max-width: 459px) {
   body .intro-section {
-    grid-template-columns: 0.63fr 0fr 0.3fr !important;
-    gap: 10px !important;
+    grid-template-columns: 0.70fr 0.20fr 0.10fr !important;
+    gap: 30px !important;
     margin-bottom: 10px !important;
   }
 
@@ -385,7 +379,8 @@ footer .right {
     letter-spacing: -0.1px !important;
   }
 
-  body .destaques, .destaques2 {
+  body .destaques,
+  body .destaques2 {
     font-size: 16.5px !important;
     word-spacing: -0.8px !important;
     letter-spacing: -0.2px !important;
@@ -397,9 +392,7 @@ footer .right {
   }
 
   body .image-box {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3.3/4 !important;
+    display: none !important;
   }
 
   body .columns {
@@ -410,9 +403,7 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 14px !important;
-    margin-bottom: 5px !important;
-    letter-spacing: -0.05px !important;
+    font-size: 16.5px !important;
   }
 
   body .column p {
@@ -438,82 +429,11 @@ footer .right {
   }
 }
 
-/* MOBILE ADJUSTMENTS FOR IPHONE 14 PRO MAX */
-@media screen and (min-width: 420px) {
-  body .intro-section {
-    grid-template-columns: 0.65fr 0fr 0.3fr !important;
-    gap: 10px !important;
-    margin-bottom: 10px !important;
-  }
-
-  body .back,
-  body .social-links a,
-  body .intro-text,
-  body .column {
-    font-size: 14.5px !important;
-    line-height: 1.2 !important;
-    word-spacing: -0.5px !important;
-    letter-spacing: -0.1px !important;
-  }
-
-  body .destaques, .destaques2 {
-    font-size: 17px !important;
-    word-spacing: -0.5px !important;
-    letter-spacing: -0.2px !important;
-  }
-
-  body .desenvolvimento {
-    text-indent: 30px !important;
-    word-spacing: -0.5px !important;
-  }
-
-  body .image-box {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3.3/4 !important;
-  }
-
-  body .columns {
-    flex-direction: column;
-    gap: 30px !important;
-    margin-top: 40px !important;
-    margin-bottom: 30px !important;
-  }
-
-  body .column h4 {
-    font-size: 14px !important;
-    margin-bottom: 5px !important;
-    letter-spacing: -0.05px !important;
-  }
-
-  body .column p {
-    font-size: 14px !important;
-    letter-spacing: -0.05px !important;
-  }
-
-  body .ano {
-    font-size: 14px !important;
-  }
-
-  body .nota {
-    font-size: 7.5px !important;
-    -webkit-text-stroke-width: 0.3px !important;
-  }
-
-  body footer {
-    padding: 0px 5px 5px 5px !important;
-  }
-
-  body footer p {
-    font-size: 12px !important;
-  }
-}
-
 /* TABLET ADJUSTMENTS FOR IPAD AIR & IPAD MINI (Vertical) */
 @media screen and (min-width: 460px) {
   body .intro-section {
-    grid-template-columns: 0.5fr 0.3fr 0.25fr !important;
-    gap: 10px !important;
+    grid-template-columns: 0.90fr 0fr 0.10fr !important;
+    gap: 100px !important;
     margin-bottom: 10px !important;
   }
 
@@ -539,9 +459,7 @@ footer .right {
   }
 
   body .image-box {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3.3/4 !important;
+  display: none !important;
   }
 
   body .columns {
@@ -552,9 +470,8 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 14px !important;
-    margin-bottom: 5px !important;
-    letter-spacing: -0.05px !important;
+    font-size: 17px !important;
+    letter-spacing: -0.5px !important;
   }
 
   body .column p {
@@ -583,8 +500,8 @@ footer .right {
 /* TABLET ADJUSTMENTS FOR IPAD PRO (Vertical) */
 @media screen and (min-width: 1024px) {
   body .intro-section {
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 120px !important;
+    grid-template-columns: 1fr 0.25fr !important;
+    gap: 80px !important;
     margin-bottom: 10px !important;
   }
 
@@ -610,22 +527,12 @@ footer .right {
   }
 
   body .image-box {
-    max-width: 220px !important;
-    height: auto;
-    aspect-ratio: 3.3/4 !important;
-  }
-
-  body .columns {
-    flex-direction: row !important;
-    gap: 120px !important;
-    margin-top: 200px !important;
-    margin-bottom: 40px !important;
+    display: none;
   }
 
   body .column h4 {
-    font-size: 14px !important;
-    margin-bottom: 5px !important;
-    letter-spacing: -0.05px !important;
+    font-size: 17px !important;
+    letter-spacing: -0.5px !important;
   }
 
   body .column p {
@@ -681,6 +588,7 @@ footer .right {
   }
 
   body .image-box {
+    display: flex !important;
     max-width: 220px !important;
     height: auto;
     aspect-ratio: 3.3/4 !important;
@@ -694,8 +602,7 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 15px !important;
-    margin-bottom: 5px !important;
+    font-size: 17.5px !important;
     letter-spacing: -0.05px !important;
   }
 
@@ -765,8 +672,7 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 15px !important;
-    margin-bottom: 5px !important;
+    font-size: 18px !important;
     letter-spacing: -0.05px !important;
   }
 
@@ -836,8 +742,7 @@ footer .right {
   }
 
   body .column h4 {
-    font-size: 17px !important;
-    margin-bottom: 5px !important;
+    font-size: 18px !important;
     letter-spacing: -0.05px !important;
   }
 
