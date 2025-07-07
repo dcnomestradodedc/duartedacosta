@@ -73,7 +73,7 @@ header {
     line-height: 1.2;
     word-spacing: -0.3px;
     -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 0.3px;
     margin: 0;
     text-align: left;
     color: black;
@@ -137,7 +137,7 @@ header {
     font-size: 15px;
     line-height: 1.35;
     -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 0.3px;
 }
 
 .p2 {
@@ -231,7 +231,7 @@ footer p {
     font-family: 'Abc Rounded Light';
     font-size: 10px;
     -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 0.3px;
 }
 
 footer .right {
@@ -283,8 +283,8 @@ footer .right {
 
 /* === MEDIA QUERIES === */
 
-/* MOBILE ADJUSTMENTS FOR IPHONE SE */
-@media screen and (max-width: 380px) {
+/* iPhones pequenos — iPhone SE, iPhone 5 (~ 380px) */
+@media screen and (max-width: 375px) {
     .header-content {
         width: 100%;
         box-sizing: border-box;
@@ -306,7 +306,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 45px 5px 5px 5px !important;
+        padding: 40px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -384,8 +384,8 @@ footer .right {
     }
 }
 
-/* MOBILE ADJUSTMENTS FOR IPHONE 12 PRO */
-@media screen and (width: 390px) {
+  /* iPhones médios — iPhone 12 Pro, iPhone 13, 14, 15 (~415px) */
+  @media screen and (min-width: 376px) and (max-width: 414px) {
     .header-content {
         width: 100%;
         box-sizing: border-box;
@@ -409,7 +409,7 @@ footer .right {
     }
 
     .image-full-width {
-        padding: 70px 5px 5px 5px !important;
+        padding: 60px 5px 5px 5px !important;
     }
 
     .image-full-sec {
@@ -486,8 +486,8 @@ footer .right {
     }
 }
 
-/* MOBILE ADJUSTMENTS FOR IPHONE XR */
-@media screen and (min-width: 400px) {
+  /* iPhones grandes — iPhone XR, 11, 14 Plus (~460px) */
+  @media screen and (min-width: 415px) and (max-width: 459px) {
     .header-content {
         width: 100%;
         box-sizing: border-box;
@@ -585,107 +585,6 @@ footer .right {
 
     footer p {
         font-size: 11px !important;
-    }
-}
-
-/* MOBILE ADJUSTMENTS FOR IPHONE 14 PRO MAX */
-@media screen and (min-width: 420px) {
-    .header-content {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 5px !important;
-    }
-
-    header .header-row {
-        grid-template-columns: 3.5fr 3.5fr 2.2fr 4fr 2fr !important;
-    }
-
-    .header-section p,
-    .header-section a {
-        font-size: 13.5px !important;
-        line-height: 1.25 !important;
-        word-spacing: -0.35px !important;
-    }
-
-    .header-section.back {
-        justify-self: end;
-        align-self: center;
-    }
-
-    .image-full-width {
-        padding: 70px 5px 5px 5px !important;
-    }
-
-    .image-full-sec {
-        padding: 0px 5px !important;
-    }
-
-    .image-full-sec img {
-        padding: 0px 0px 5px 0px !important;
-    }
-
-    .text-block {
-        padding: 0px 5px 5px 5px !important;
-    }
-
-    .text-block p {
-        font-size: 14.5px !important;
-        line-height: 1.2 !important;
-        word-spacing: -0.3px !important;
-    }
-
-    .destaques, .destaques2 {
-        font-size: 17px !important;
-        word-spacing: -0.3px !important;
-    }
-
-    .p2 {
-        padding-left: 40% !important;
-        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
-    }
-
-    .legenda-block {
-        padding: 0px 5px 5px 5px !important;
-    }
-
-    .legenda-block p {
-        font-size: 13.5px !important;
-        line-height: 1.2 !important;
-    }
-
-    .image-grid {
-        gap: 5px;
-        padding: 0px 5px 5px 5px !important;
-    }
-
-    .overlay {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        height: 100% !important;
-        width: 100% !important;
-    
-        /* Espaçamento lateral (podes ajustar o valor) */
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
-    }
-    
-    #expandedImg {
-        max-width: 100% !important;
-        max-height: 100% !important;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    footer {
-        padding: 0px 5px 5px 5px !important;
-    }
-
-    footer p {
-        font-size: 12px !important;
     }
 }
 
