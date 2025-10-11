@@ -94,36 +94,126 @@ header {
     -webkit-text-stroke-width: 0.1px;
 }
 
-/* Main content */
-.container {
-  display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;     /* centraliza verticalmente */
-  height: 100vh;           /* ocupa a altura da tela */
+/* IMAGEM FULL WIDTH */
+.image-full-width {
+    padding: 0px 5px 5px 5px;
+    box-sizing: border-box;
 }
 
-h1 {
-  font-family: 'EB Garamond Medium', serif;
-  font-size: 30px;
-  line-height: 0.8;
-  text-align: center;
-  -webkit-text-stroke-width: 0px;
+.image-full-width img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.image-full-sec {
+    padding: 0px 5px;
+    box-sizing: border-box;
+}
+
+.image-full-sec img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+}
+
+/* TEXTO */
+.text-block {
+    padding: 0px 5px 5px 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.text-block p {
+    margin: 0;
+    text-align:left;
+    font-family: 'Abc Rounded Light', sans-serif;
+    font-size: 15px;
+    line-height: 1.35;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.3px;
+}
+
+.p2 {
+    padding-left: 49%;
+    text-indent: 104px;
+}
+
+.destaques {
+    font-family: 'EB Garamond Medium';
+    font-size: 17.5px;
+    line-height: 0.9;
+    -webkit-text-stroke-width: 0px;
+  }
+
+.destaques2 {
+    font-family: 'EB Garamond Medium Italic';
+    font-size: 17.5px;
+    line-height: 0.9;
+    -webkit-text-stroke-width: 0px;
+}
+
+.legenda-block {
+    padding: 0px 5px 5px 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.legenda-block p {
+    margin: 0;
+    text-align:left;
+    hyphens: auto;
+    font-size: 13px;
+    line-height: 1.2;
+    padding-left: 56%;
+}
+
+.autores {
+    font-family: 'Abc Rounded Light', sans-serif;
+    word-spacing: -1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.1px;
 }
 
 a {
-    font-family: 'Abc Rounded Light', sans-serif;
-    font-size: 15px;
-    word-spacing: -0.3px;
-    color: black;
-    -webkit-text-stroke-width: 0px;
     text-decoration: none;
-}
-
-a:hover {
+    color: black;
+  }
+  
+  a:hover {
     color: #00FF00;
     text-decoration: underline;
     -webkit-text-stroke-color: #00FF00;
     -webkit-text-stroke-width: 0.1px;
+  }
+
+/* GRELHA DE IMAGENS LADO A LADO */
+.image-grid {
+    display: flex;
+    gap: 5px;
+    padding: 0 5px 5px 5px;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.grid-left,
+.grid-right {
+    flex: 1;
+    display: flex;
+}
+
+.grid-left img,
+.grid-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 footer {
@@ -148,6 +238,49 @@ footer .right {
     margin-left: auto; /* Este "auto" empurra o conteúdo para a direita */
 }
 
+/* OVERLAY PARA EXPANDIR IMAGENS */
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+
+    /* Espaçamento lateral (podes ajustar o valor) */
+    padding: 5px !important;
+    box-sizing: border-box; /* Garante que padding não aumenta o tamanho total */
+}
+
+#expandedImg {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Botão fechar dentro do overlay */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight:lighter;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10000;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #00FF00;
+}
+
 /* === MEDIA QUERIES === */
 
 /* iPhones pequenos — iPhone SE, iPhone 5 (~ 380px) */
@@ -159,7 +292,7 @@ footer .right {
     }
 
     header .header-row {
-        grid-template-columns: 3fr 3.5fr 2fr 4fr 2fr !important;
+        grid-template-columns: 3fr 3fr 2fr 2fr 2fr !important;
     }
 
     header .header-section p,
@@ -172,26 +305,74 @@ footer .right {
         align-self: center;
     }
 
-    .container {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
-    height: 100vh;           /* ocupa a altura da tela */
-}
-
-    h1 {
-    font-family: 'EB Garamond Medium', serif;
-    font-size: 18px;
-    text-align: center;
-    -webkit-text-stroke-width: 0px;
+    .image-full-width {
+        padding: 55px 5px 5px 5px !important;
     }
 
-    a {
-    font-family: 'Abc Rounded Light', sans-serif;
-    font-size: 11px;
-    word-spacing: -0.3px;
-    color: black;
-    text-decoration: none;
+    .image-full-sec {
+        padding: 0px 5px !important;
+    }
+
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    body .text-block p {
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important;
+    }
+
+    body .destaques, .destaques2 {
+        font-size: 12.5px !important;
+        line-height: 0.8 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    body .legenda-block {
+        padding: 0px 5px 5px 8px !important;
+    }
+
+    body .legenda-block p {
+        font-size: 10px !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .image-grid {
+        gap: 5px !important;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -227,26 +408,73 @@ footer .right {
         align-self: center;
     }
 
-    .container {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
-    height: 100vh;           /* ocupa a altura da tela */
-}
-
-    h1 {
-    font-family: 'EB Garamond Medium', serif;
-    font-size: 19px;
-    text-align: center;
-    -webkit-text-stroke-width: 0px;
+    .image-full-width {
+        padding: 70px 5px 5px 5px !important;
     }
 
-    a {
-    font-family: 'Abc Rounded Light', sans-serif;
-    font-size: 11px;
-    word-spacing: -0.3px;
-    color: black;
-    text-decoration: none;
+    .image-full-sec {
+        padding: 0px 5px !important;
+    }
+
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 14px !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .destaques, .destaques2 {
+        font-size: 16px !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; 
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .legenda-block p {
+        font-size: 13px !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -282,26 +510,73 @@ footer .right {
         align-self: center;
     }
 
-    .container {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
-    height: 100vh;           /* ocupa a altura da tela */
+    .image-full-width {
+        padding: 70px 5px 5px 5px !important;
     }
 
-    h1 {
-    font-family: 'EB Garamond Medium', serif;
-    font-size: 19px;
-    text-align: center;
-    -webkit-text-stroke-width: 0px;
+    .image-full-sec {
+        padding: 0px 5px !important;
     }
 
-    a {
-    font-family: 'Abc Rounded Light', sans-serif;
-    font-size: 12px;
-    word-spacing: -0.3px;
-    color: black;
-    text-decoration: none;
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 14px !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .destaques, .destaques2 {
+        font-size: 16.5px !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .legenda-block p {
+        font-size: 13px !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.3px !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -322,7 +597,7 @@ footer .right {
     }
 
     header .header-row {
-        grid-template-columns: 4fr 5fr 2fr 4fr 2fr !important;
+        grid-template-columns: 2fr 3fr 2fr 3fr 1fr !important;
     }
 
     .header-section p,
@@ -337,26 +612,72 @@ footer .right {
         align-self: center;
     }
 
-    .container {
-        display: flex;
-        justify-content: center; /* centraliza horizontalmente */
-        align-items: center;     /* centraliza verticalmente */
-        height: 100vh;           /* ocupa a altura da tela */
+    .image-full-width {
+        padding: 40px 5px 5px 5px !important;
     }
 
-    h1 {
-        font-family: 'EB Garamond Medium', serif;
-        font-size: 25px;
-        text-align: center;
-        -webkit-text-stroke-width: 0px;
+    .image-full-sec {
+        padding: 0px 5px !important;
     }
 
-    a {
-        font-family: 'Abc Rounded Light', sans-serif;
-        font-size: 15px;
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 14.5px !important;
+        line-height: 1.2 !important;
         word-spacing: -0.3px;
-        color: black;
-        text-decoration: none;
+    }
+
+    .destaques, .destaques2 {
+        font-size: 17px !important;
+        word-spacing: -0.3px;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .legenda-block p {
+        font-size: 13.5px !important;
+        line-height: 1.2 !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -377,7 +698,7 @@ footer .right {
     }
 
     header .header-row {
-        grid-template-columns: 3.5fr 5.8fr 2fr 3.5fr 2fr !important;
+        grid-template-columns: 2.5fr 3.5fr 1.5fr 2fr 1.5fr !important;
     }
 
     .header-section p,
@@ -392,26 +713,73 @@ footer .right {
         align-self: center;
     }
 
-     .container {
-        display: flex;
-        justify-content: center; /* centraliza horizontalmente */
-        align-items: center;     /* centraliza verticalmente */
-        height: 100vh;           /* ocupa a altura da tela */
+    .image-full-width {
+        padding: 25px 5px 5px 5px !important;
     }
 
-    h1 {
-        font-family: 'EB Garamond Medium', serif;
-        font-size: 30px;
-        text-align: center;
-        -webkit-text-stroke-width: 0px;
+    .image-full-sec {
+        padding: 0px 5px !important;
     }
 
-    a {
-        font-family: 'Abc Rounded Light', sans-serif;
-        font-size: 20px;
-        word-spacing: -0.3px;
-        color: black;
-        text-decoration: none;
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 14.5 !important;
+        line-height: 1.15 !important;
+        word-spacing: -0.8px !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .destaques, .destaques2 {
+        font-size: 17 !important;
+        word-spacing: -0.8px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 15px !important;
+    }
+
+    .legenda-block p {
+        font-size: 13.5px !important;
+        line-height: 1.15 !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -432,7 +800,7 @@ footer .right {
     }
 
     header .header-row {
-        grid-template-columns: 3.5fr 5fr 2fr 4fr 2fr !important;
+        grid-template-columns: 2.5fr 3.5fr 1.5fr 2fr 1.5fr !important;
     }
 
     .header-section p,
@@ -447,26 +815,72 @@ footer .right {
         align-self: center;
     }
 
-        .container {
-        display: flex;
-        justify-content: center; /* centraliza horizontalmente */
-        align-items: center;     /* centraliza verticalmente */
-        height: 100vh;           /* ocupa a altura da tela */
+    .image-full-width {
+        padding: 20px 5px 5px 5px !important;
     }
 
-    h1 {
-        font-family: 'EB Garamond Medium', serif;
-        font-size: 30px;
-        text-align: center;
-        -webkit-text-stroke-width: 0px;
+    .image-full-sec {
+        padding: 0px 5px !important;
     }
 
-    a {
-        font-family: 'Abc Rounded Light', sans-serif;
-        font-size: 20px;
-        word-spacing: -0.3px;
-        color: black;
-        text-decoration: none;
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+        word-spacing: -0.8px !important;
+    }
+    
+    .destaques, .destaques2 {
+        font-size: 17.5px !important;
+        word-spacing: -0.8px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 15px !important;
+    }
+
+    .legenda-block p {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -487,7 +901,7 @@ footer .right {
     }
 
     header .header-row {
-        grid-template-columns: 3.5fr 5fr 2fr 4fr 2fr !important;
+        grid-template-columns: 2.5fr 3.5fr 1.5fr 2fr 1.5fr !important;
     }
 
     .header-section p,
@@ -502,26 +916,73 @@ footer .right {
         align-self: center;
     }
 
-        .container {
-        display: flex;
-        justify-content: center; /* centraliza horizontalmente */
-        align-items: center;     /* centraliza verticalmente */
-        height: 100vh;           /* ocupa a altura da tela */
+    .image-full-width {
+        padding: 20px 5px 5px 5px !important;
     }
 
-    h1 {
-        font-family: 'EB Garamond Medium', serif;
-        font-size: 30px;
-        text-align: center;
-        -webkit-text-stroke-width: 0px;
+    .image-full-sec {
+        padding: 0px 5px !important;
     }
 
-    a {
-        font-family: 'Abc Rounded Light', sans-serif;
-        font-size: 20px;
-        word-spacing: -0.3px;
-        color: black;
-        text-decoration: none;
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+        word-spacing: -0.8px !important;
+        letter-spacing: -0.1px !important;
+    }
+
+    .destaques, .destaques2 {
+        font-size: 17.5px !important;
+        word-spacing: -0.8px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 15px !important;
+    }
+
+    .legenda-block p {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
 
     footer {
@@ -557,26 +1018,73 @@ footer .right {
         align-self: center;
     }
 
-       .container {
-        display: flex;
-        justify-content: center; /* centraliza horizontalmente */
-        align-items: center;     /* centraliza verticalmente */
-        height: 100vh;           /* ocupa a altura da tela */
+    .image-full-width {
+        padding: 0px 5px 5px 5px !important;
     }
 
-    h1 {
-        font-family: 'EB Garamond Medium', serif;
-        font-size: 40px;
-        text-align: center;
-        -webkit-text-stroke-width: 0px;
+    .image-full-sec {
+        padding: 0px 5px !important;
     }
 
-    a {
-        font-family: 'Abc Rounded Light', sans-serif;
-        font-size: 20px;
-        word-spacing: -0.3px;
-        color: black;
-        text-decoration: none;
+    .image-full-sec img {
+        padding: 0px 0px 5px 0px !important;
+    }
+
+    .text-block {
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .text-block p {
+        font-size: 17px !important;
+        line-height: 1.1 !important;
+        word-spacing: -0.5px !important;
+    }
+
+    .destaques, .destaques2 {
+        font-size: 18px !important;
+        line-height: 1.1 !important;
+        word-spacing: -0.5px !important;
+    }
+
+    .p2 {
+        padding-left: 40% !important;
+        text-indent: 27% !important; /* Ajuste do text-indent para alinhar com o padding-left do .legenda-block p */
+    }
+
+    .legenda-block {
+        padding: 0px 5px 5px 15px !important;
+    }
+
+    .legenda-block p {
+        font-size: 15.5px !important;
+        line-height: 1.2 !important;
+    }
+
+    .image-grid {
+        gap: 5px;
+        padding: 0px 5px 5px 5px !important;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    
+        /* Espaçamento lateral (podes ajustar o valor) */
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        box-sizing: border-box !important; /* Garante que padding não aumenta o tamanho total */
+    }
+    
+    #expandedImg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease-in-out;
     }
     
     footer {
